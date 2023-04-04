@@ -1,24 +1,23 @@
+const { isUtf8 } = require('buffer');
+const { readFile } = require('fs');
 const fs = require('fs/promises')
 
 const myFileWriter = async (fileName, fileContent) => {
-	// write code here
-	// dont chnage function name
+	fs.writeFile(fileName, fileContent);
 }
 
 const myFileReader = async (fileName) => {
-	// write code here
-	// dont chnage function name
+	const data = await readFile(fileName, 'utf8');
+	return data;
 }
 
 
 const myFileUpdater = async (fileName, fileContent) => {
-	// write code here
-	// dont chnage function name
+	fs.appendFile(filename, fileContent)
 }
 
 const myFileDeleter = async (fileName) => {
-	// write code here
-	// dont chnage function name
+	fs.unlink(fileName);
 }
 
 
