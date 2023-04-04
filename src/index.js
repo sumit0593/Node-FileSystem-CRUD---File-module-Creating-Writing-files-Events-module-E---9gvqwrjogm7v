@@ -1,5 +1,3 @@
-const { isUtf8 } = require('buffer');
-const { readFile } = require('fs');
 const fs = require('fs/promises')
 
 const myFileWriter = async (fileName, fileContent) => {
