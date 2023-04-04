@@ -1,24 +1,20 @@
 const fs = require('fs/promises')
 
 const myFileWriter = async (fileName, fileContent) => {
-
 	fs.writeFile(fileName, fileContent);
 }
 
 const myFileReader = async (fileName) => {
-
 	const data = await fs.readFile(fileName, 'utf8');
 	return data;
 }
 
 
 const myFileUpdater = async (fileName, fileContent) => {
-
-	fs.appendFile(filename, fileContent);
+	fs.appendFile(fileName, fileContent)
 }
 
 const myFileDeleter = async (fileName) => {
-
 	fs.unlink(fileName);
 }
 
